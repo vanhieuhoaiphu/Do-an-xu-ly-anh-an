@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1491</width>
+    <height>887</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="lbl_photo">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>50</y>
+      <width>451</width>
+      <height>731</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid black;
+qproperty-alignment: AlignCenter;
+background-color:white
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_newPhoto">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>50</y>
+      <width>471</width>
+      <height>731</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid black;
+qproperty-alignment: AlignCenter;
+background-color:white
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>501</width>
+      <height>791</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#282828</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>10</y>
+      <width>521</width>
+      <height>791</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#282828</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_brighness">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>410</y>
+      <width>321</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="value">
+     <number>50</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>370</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white
+</string>
+    </property>
+    <property name="text">
+     <string>Brighness</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_grayImage">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>220</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white
+
+</string>
+    </property>
+    <property name="text">
+     <string>Ảnh xám</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>1110</x>
+      <y>20</y>
+      <width>331</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="histogramWidget"/>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>430</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white
+</string>
+    </property>
+    <property name="text">
+     <string>Threshold</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_threshold">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>460</y>
+      <width>321</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkbox_invertImage">
+    <property name="geometry">
+     <rect>
+      <x>1360</x>
+      <y>220</y>
+      <width>91</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white
+
+</string>
+    </property>
+    <property name="text">
+     <string>Đảo ảnh</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_saturation">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>340</y>
+      <width>321</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="pageStep">
+     <number>10</number>
+    </property>
+    <property name="value">
+     <number>50</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="invertedAppearance">
+     <bool>false</bool>
+    </property>
+    <property name="invertedControls">
+     <bool>false</bool>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::NoTicks</enum>
+    </property>
+    <property name="tickInterval">
+     <number>4</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>320</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white
+</string>
+    </property>
+    <property name="text">
+     <string>Saturation</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>-30</y>
+      <width>1501</width>
+      <height>891</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#535353
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>20</y>
+      <width>191</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Sans Serif</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#FFF</string>
+    </property>
+    <property name="text">
+     <string>ORIGINAL</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>10</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#FFF</string>
+    </property>
+    <property name="text">
+     <string>CHANGE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_reset">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>747</y>
+      <width>341</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:white
+</string>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/icons8-reset-50.png</normaloff>images/icons8-reset-50.png</iconset>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_hue">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>280</y>
+      <width>321</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>360</number>
+    </property>
+    <property name="pageStep">
+     <number>10</number>
+    </property>
+    <property name="value">
+     <number>180</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksBelow</enum>
+    </property>
+    <property name="tickInterval">
+     <number>25</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>260</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white</string>
+    </property>
+    <property name="text">
+     <string>Hue</string>
+    </property>
+   </widget>
+   <zorder>label_7</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label</zorder>
+   <zorder>lbl_photo</zorder>
+   <zorder>lbl_newPhoto</zorder>
+   <zorder>slider_brighness</zorder>
+   <zorder>label_4</zorder>
+   <zorder>checkBox_grayImage</zorder>
+   <zorder>verticalLayoutWidget</zorder>
+   <zorder>label_5</zorder>
+   <zorder>slider_threshold</zorder>
+   <zorder>checkbox_invertImage</zorder>
+   <zorder>slider_saturation</zorder>
+   <zorder>label_6</zorder>
+   <zorder>label_8</zorder>
+   <zorder>label_11</zorder>
+   <zorder>btn_reset</zorder>
+   <zorder>slider_hue</zorder>
+   <zorder>label_2</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1491</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionPrint"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuImage">
+    <property name="title">
+     <string>Image</string>
+    </property>
+    <addaction name="actionRotation"/>
+    <addaction name="actionShearing"/>
+    <addaction name="separator"/>
+    <addaction name="actionZoom_in"/>
+    <addaction name="actionZoom_out"/>
+   </widget>
+   <widget class="QMenu" name="menuEnhancement">
+    <property name="title">
+     <string>Enhancement</string>
+    </property>
+    <addaction name="actionHistogram_equal"/>
+    <addaction name="actionLog"/>
+    <addaction name="actionGamma"/>
+   </widget>
+   <widget class="QMenu" name="menuSmoothing">
+    <property name="title">
+     <string>Filter</string>
+    </property>
+    <widget class="QMenu" name="menuBlur">
+     <property name="title">
+      <string>Blur</string>
+     </property>
+     <addaction name="actionBox"/>
+     <addaction name="actionMedian"/>
+     <addaction name="actionGaussian"/>
+    </widget>
+    <widget class="QMenu" name="menuNoise">
+     <property name="title">
+      <string>Noise</string>
+     </property>
+     <addaction name="actionAdd_Noise"/>
+    </widget>
+    <widget class="QMenu" name="menuSharpen">
+     <property name="title">
+      <string>Sharpen</string>
+     </property>
+     <addaction name="actionSobel_3"/>
+     <addaction name="actionLaplaceSharpen"/>
+    </widget>
+    <widget class="QMenu" name="menuEdge_Detection">
+     <property name="title">
+      <string>Edge Detection</string>
+     </property>
+     <widget class="QMenu" name="menuSobel">
+      <property name="title">
+       <string>Sobel</string>
+      </property>
+      <addaction name="actionEDHorizontalSobel"/>
+      <addaction name="actionEDVerticalSobel"/>
+     </widget>
+     <addaction name="menuSobel"/>
+     <addaction name="actionScharr"/>
+     <addaction name="actionPrewitt"/>
+     <addaction name="actionRoberts"/>
+     <addaction name="actionEDLaplace_2"/>
+    </widget>
+    <addaction name="menuBlur"/>
+    <addaction name="menuNoise"/>
+    <addaction name="menuSharpen"/>
+    <addaction name="menuEdge_Detection"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuImage"/>
+   <addaction name="menuEnhancement"/>
+   <addaction name="menuSmoothing"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionPrint"/>
+   <addaction name="actionExit"/>
+   <addaction name="separator"/>
+   <addaction name="actionZoom_out"/>
+   <addaction name="actionZoom_in"/>
+   <addaction name="actionRotation"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Huyhoang/open.png</normaloff>../Huyhoang/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionOpen_2">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Huyhoang/open.png</normaloff>../Huyhoang/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Huyhoang/save.png</normaloff>../Huyhoang/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Huyhoang/print.png</normaloff>../Huyhoang/print.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Huyhoang/Quit.png</normaloff>../Huyhoang/Quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionRotation">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/icons8-3d-rotate-48.png</normaloff>images/icons8-3d-rotate-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rotation</string>
+   </property>
+  </action>
+  <action name="actionShearing">
+   <property name="text">
+    <string>Shearing</string>
+   </property>
+  </action>
+  <action name="actionZoom_in">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/zoom_out_icon.png</normaloff>images/zoom_out_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom in 10%</string>
+   </property>
+  </action>
+  <action name="actionZoom_out">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/zoom_in_icon.png</normaloff>images/zoom_in_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom out 10%</string>
+   </property>
+  </action>
+  <action name="actionBox">
+   <property name="text">
+    <string>Box</string>
+   </property>
+  </action>
+  <action name="actionMedian">
+   <property name="text">
+    <string>Median</string>
+   </property>
+  </action>
+  <action name="actionGaussian">
+   <property name="text">
+    <string>Gaussian</string>
+   </property>
+  </action>
+  <action name="actionHistogram_equal">
+   <property name="text">
+    <string>Histogram equal</string>
+   </property>
+  </action>
+  <action name="actionAdd_Noise">
+   <property name="text">
+    <string>Add Noise</string>
+   </property>
+  </action>
+  <action name="actionLog">
+   <property name="text">
+    <string>Logarit</string>
+   </property>
+  </action>
+  <action name="actionGamma">
+   <property name="text">
+    <string>Gamma</string>
+   </property>
+  </action>
+  <action name="actionDerivatives">
+   <property name="text">
+    <string>Derivatives</string>
+   </property>
+  </action>
+  <action name="actionLaplace">
+   <property name="text">
+    <string>Laplace</string>
+   </property>
+  </action>
+  <action name="actionSobel">
+   <property name="text">
+    <string>Sobel</string>
+   </property>
+  </action>
+  <action name="actionEDSobel">
+   <property name="text">
+    <string>Sobel</string>
+   </property>
+  </action>
+  <action name="actionEDScharr">
+   <property name="text">
+    <string>Scharr</string>
+   </property>
+  </action>
+  <action name="actionEDPrewitt">
+   <property name="text">
+    <string>Prewitt</string>
+   </property>
+  </action>
+  <action name="actionEDRoberts">
+   <property name="text">
+    <string>Roberts</string>
+   </property>
+  </action>
+  <action name="actionScharr">
+   <property name="text">
+    <string>Scharr</string>
+   </property>
+  </action>
+  <action name="actionPrewitt">
+   <property name="text">
+    <string>Prewitt</string>
+   </property>
+  </action>
+  <action name="actionRoberts">
+   <property name="text">
+    <string>Roberts</string>
+   </property>
+  </action>
+  <action name="actionEDHorizontalSobel">
+   <property name="text">
+    <string>Horizontal</string>
+   </property>
+  </action>
+  <action name="actionEDVerticalSobel">
+   <property name="text">
+    <string>Vertical</string>
+   </property>
+  </action>
+  <action name="actionEDLaplace_2">
+   <property name="text">
+    <string>Laplace</string>
+   </property>
+  </action>
+  <action name="actionSobel_3">
+   <property name="text">
+    <string>Sobel</string>
+   </property>
+  </action>
+  <action name="actionLaplaceSharpen">
+   <property name="text">
+    <string>Laplace</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
